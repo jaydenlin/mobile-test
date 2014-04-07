@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slidemenu</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.15.0/build/cssreset/cssreset-min.css">
+    <style>
+        #outterHTML {
+            position: relative;
+            width: 100%;
+            background-color: red;
+            height: 100px;
+        }
+        #innerHTML {
+            position: relative;
+            width: 100%;
+            background-color: blue;
+            height: 100px;
+            
+        }
+        #nav {
+            position: absolute;
+            top:0px;
+            width:70%;
+            left:-70%;
+            background-color: yellow;
+            height: 100px;
+        }
+        .show{
+            -webkit-transform: translate3d(70%,0,0);
+            -moz-transform: translate3d(70%,0,0);
+            -o-transform: translate3d(70%,0,0);
+            transform: translate3d(70%,0,0);
+            -webkit-transition: all .3s ease-in-out;
+            -moz-transition: all .3s ease-in-out;
+            -o-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+           
+        }
+    </style>
+   
+</head>
+
+<body>
+    <div id="outterHTML">
+        <div id="innerHTML">
+            <nav id="nav">
+                <ul>
+                    <li>123</li>
+                    <li>456</li>
+                    <li>789</li>
+                </ul>
+            </nav>
+            <div id="content">
+            </div>
+        </div>
+    </div>
+</body>
+ <script>
+        document.getElementById("innerHTML").onclick=function(evt){
+            this.className="show";
+        };
+    </script>
+</html>
